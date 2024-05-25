@@ -9,7 +9,8 @@ def znajdz_min_max_id(data):
     return min(ids), max(ids)
 
 
-def wyswietl_informacje_zwierzaka(id_zwierzaka, data=data):
+def wyswietl_informacje_zwierzaka(data=data):
+    id_zwierzaka = wybranie_pacjenta(data)
     for zwierze in data['zwierzeta']:
         if zwierze['id'] == id_zwierzaka:
             print("--------------------")
@@ -30,7 +31,7 @@ def wyswietl_informacje_zwierzaka(id_zwierzaka, data=data):
                 leki = ', '.join(zabieg.get('leki', [])) if zabieg.get('leki') else "brak"
                 print(f"    Leki: {leki}")
             print("--------------------")
-            return
+            return ""
 
 
 
@@ -53,5 +54,6 @@ def wybranie_pacjenta(data):
         except ValueError as e:
             print(e)
 
-    return wyswietl_informacje_zwierzaka(id_wybrany)
+    return id_wybrany
 
+print(wyswietl_informacje_zwierzaka(data))
