@@ -53,5 +53,5 @@ def wybranie_pacjenta(data):
         except ValueError as e:
             print(e)
 
-    return id_wybrany
+    return wyswietl_informacje_zwierzaka(id_wybrany)
 
