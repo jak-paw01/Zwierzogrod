@@ -1,0 +1,126 @@
+{
+    "zwierzeta": [
+        {
+            "id": 1,
+            "typ": "pies",
+            "imie": "Laudon",
+            "waga": 30.5,
+            "wiek": 5,
+            "zgon": false,
+            "wlasciciel": {
+                "imie_nazwisko": "Jan Waligrucha",
+                "telefon": "123-456-789"
+            },
+            "historia_leczenia": [
+                {
+                    "id_zwierzaka": 1,
+                    "id_zabiegu": 101,
+                    "data": "2023-01-15",
+                    "opis": "Szczepienie",
+                    "leki": [
+                        "Szczepionka",
+                        "Bandaże"
+                    ]
+                },
+                {
+                    "id_zwierzaka": 1,
+                    "id_zabiegu": 102,
+                    "data": "2023-03-22",
+                    "opis": "Odrobaczenie",
+                    "leki": [
+                        "Tabletki przeciw robakom"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "typ": "kot",
+            "imie": "Misia",
+            "waga": 4.3,
+            "wiek": 3,
+            "zgon": false,
+            "wlasciciel": {
+                "imie_nazwisko": "Anna Nowak",
+                "telefon": "987-654-321"
+            },
+            "historia_leczenia": [
+                {
+                    "id_zwierzaka": 2,
+                    "id_zabiegu": 201,
+                    "data": "2023-02-10",
+                    "opis": "Sterylizacja",
+                    "leki": [
+                        "Antybiotyk",
+                        "Witaminy"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "typ": "papuga",
+            "imie": "Polly",
+            "waga": 0.9,
+            "wiek": 2,
+            "zgon": false,
+            "wlasciciel": {
+                "imie_nazwisko": "Marek Wiśniewski",
+                "telefon": "456-789-012"
+            },
+            "historia_leczenia": [
+                {
+                    "id_zwierzaka": 3,
+                    "id_zabiegu": 301,
+                    "data": "2023-04-12",
+                    "opis": "Przycinanie dzioba",
+                    "leki": []
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "typ": "chomik",
+            "imie": "Kubuś",
+            "waga": 0.05,
+            "wiek": 1,
+            "zgon": false,
+            "wlasciciel": {
+                "imie_nazwisko": "Katarzyna Nowak",
+                "telefon": "321-654-987"
+            },
+            "historia_leczenia": [
+                {
+                    "id_zwierzaka": 4,
+                    "id_zabiegu": 401,
+                    "data": "2023-05-05",
+                    "opis": "Przycinanie pazurów",
+                    "leki": []
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "typ": "krolik",
+            "imie": "Rzepinek",
+            "waga": 2.5,
+            "wiek": 4,
+            "zgon": false,
+            "wlasciciel": {
+                "imie_nazwisko": "Pawel Mistrzak",
+                "telefon": "654-987-321"
+            },
+            "historia_leczenia": [
+                {
+                    "id_zwierzaka": 5,
+                    "id_zabiegu": 501,
+                    "data": "2023-02-20",
+                    "opis": "Kontrola dentystyczna",
+                    "leki": [
+                        "Pasta do zebow"
+                    ]
+                }
+            ]
+        }
+    ]
+}
