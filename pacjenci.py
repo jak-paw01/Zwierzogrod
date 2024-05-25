@@ -56,4 +56,3 @@ def wybranie_pacjenta(data):
 
     return id_wybrany
 
-print(wyswietl_informacje_zwierzaka(data))
