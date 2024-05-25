@@ -31,7 +31,7 @@ def wyswietl_informacje_zwierzaka(data=data):
                 leki = ', '.join(zabieg.get('leki', [])) if zabieg.get('leki') else "brak"
                 print(f"    Leki: {leki}")
             print("--------------------")
-            return ""
+            return id_zwierzaka
 
 
 
