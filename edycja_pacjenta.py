@@ -30,5 +30,3 @@ def edytuj_dane():
     with open('baza.json', 'w', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False, indent=4)
 
-
-edytuj_dane()
