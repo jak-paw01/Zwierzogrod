@@ -1,16 +1,19 @@
 import json
 
-# Odczyt pliku JSON
-with open('baza.json', 'r', encoding='utf-8') as file:
-    data = json.load(file)
+def odczyt():
+    with open('baza.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    return data
 
 def znajdz_min_max_id(data):
     ids = [zwierze['id'] for zwierze in data['zwierzeta']]
     return min(ids), max(ids)
 
 
-def wyswietl_informacje_zwierzaka(data=data):
-    id_zwierzaka = wybranie_pacjenta(data)
+def wyswietl_informacje_zwierzaka():
+    data = odczyt()
+
+    id_zwierzaka = wybranie_pacjenta()
     for zwierze in data['zwierzeta']:
         if zwierze['id'] == id_zwierzaka:
             print("--------------------")
@@ -35,7 +38,9 @@ def wyswietl_informacje_zwierzaka(data=data):
 
 
 
-def wybranie_pacjenta(data):
+def wybranie_pacjenta():
+    data = odczyt()
+
     for zwierze in data['zwierzeta']:
         print(f"Id: {zwierze['id']}, imię: {zwierze['imie']}")
     
@@ -55,4 +60,3 @@ def wybranie_pacjenta(data):
             print(e)
 
     return id_wybrany
-
