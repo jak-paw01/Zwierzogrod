@@ -20,7 +20,8 @@
                     "leki": [
                         "Szczepionka",
                         "Bandaże"
-                    ]
+                    ],
+                    "kwota": 100
                 },
                 {
                     "id_zwierzaka": 1,
@@ -29,7 +30,8 @@
                     "opis": "Odrobaczenie",
                     "leki": [
                         "Tabletki przeciw robakom"
-                    ]
+                    ],
+                    "kwota": 200
                 }
             ]
         },
@@ -53,7 +55,8 @@
                     "leki": [
                         "Antybiotyk",
                         "Witaminy"
-                    ]
+                    ],
+                    "kwota": 600
                 }
             ]
         },
@@ -74,7 +77,8 @@
                     "id_zabiegu": 301,
                     "data": "2023-04-12",
                     "opis": "Przycinanie dzioba",
-                    "leki": []
+                    "leki": [],
+                    "kwota": 50
                 }
             ]
         },
@@ -95,7 +99,8 @@
                     "id_zabiegu": 401,
                     "data": "2023-05-05",
                     "opis": "Przycinanie pazurów",
-                    "leki": []
+                    "leki": [],
+                    "kwota": 70
                 }
             ]
         },
@@ -118,7 +123,8 @@
                     "opis": "Kontrola dentystyczna",
                     "leki": [
                         "Pasta do zebow"
-                    ]
+                    ],
+                    "kwota": 100
                 }
             ]
         }
