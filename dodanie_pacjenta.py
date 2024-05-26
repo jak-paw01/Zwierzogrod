@@ -1,24 +1,46 @@
-import csv
+import json
 
-def dodanie_pacjenta(plik_csv: str) -> None:
-    typ_zwierzaka = input("Typ zwierzaka: ")
-    imie = input("Imie zwierzaka: ")
-    try:
-        waga = float(input("Waga: "))
-    except ValueError:
-        print("Waga musi być liczbą.")
-        return
-    try:
-        wiek = int(input("Wiek: "))
-    except ValueError:
-        print("Wiek musi być liczbą całkowitą.")
-        return
-    wlasciciel = input("Imie i nazwisko wlasciciela: ")
-    nr_tel = input("Numer telefonu: ")
+plik = 'baza.json'
 
-    with open(plik_csv, mode='a', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow([typ_zwierzaka, imie, waga, wiek, wlasciciel, nr_tel])
 
-plik_csv = 'zwierzaki.csv'
-dodanie_pacjenta(plik_csv)
+def wczytanie_bazy(plik):
+    with open(plik, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def zapis_bazy(plik, baza):
+    with open(plik, 'w', encoding='utf-8') as f:
+        json.dump(baza, f, indent=4, ensure_ascii=False)
+
+
+def dodanie_pacjenta(plik):
+    baza = wczytanie_bazy(plik)
+
+    typ = input("Podaj typ zwierzęcia: ")
+    imie = input("Podaj imię zwierzęcia: ")
+    waga = float(input("Podaj wagę zwierzęcia: "))
+    wiek = int(input("Podaj wiek zwierzęcia: "))
+    zgon = False
+    wlasciciel_imie_nazwisko = input("Podaj imię i nazwisko właściciela: ")
+    wlasciciel_telefon = input("Podaj telefon właściciela: ")
+
+    nowe_id = max([zwierze["id"] for zwierze in baza["zwierzeta"]]) + 1
+
+    nowy_zwierzak = {
+        "id": nowe_id,
+        "typ": typ,
+        "imie": imie,
+        "waga": waga,
+        "wiek": wiek,
+        "zgon": zgon,
+        "wlasciciel": {
+            "imie_nazwisko": wlasciciel_imie_nazwisko,
+            "telefon": wlasciciel_telefon
+        }
+    }
+
+    baza["zwierzeta"].append(nowy_zwierzak)
+    zapis_bazy(plik, baza)
+
+
+dodanie_pacjenta(plik)
