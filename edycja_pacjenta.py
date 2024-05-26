@@ -1,8 +1,5 @@
 import json
-from pacjenci import wyswietl_informacje_zwierzaka
-
-with open('baza.json', 'r', encoding='utf-8') as file:
-    data = json.load(file)
+from pacjenci import wyswietl_informacje_zwierzaka, odczyt
 
 
 def sprawdz_klucz(zwierze, klucz):
@@ -24,11 +21,14 @@ def edytuj_dane_zwierzaka(data, id_zwierzaka):
     return data
 
 # Funkcja główna do edycji danych zwierzaka
-def edytuj_dane(data):
-    id_zwierzaka = wyswietl_informacje_zwierzaka(data)
+def edytuj_dane():
 
-    result = edytuj_dane_zwierzaka(data, id_zwierzaka)
+    id_zwierzaka = wyswietl_informacje_zwierzaka()
+
+    result = edytuj_dane_zwierzaka(odczyt(), id_zwierzaka)
 
     with open('baza.json', 'w', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False, indent=4)
 
+
+edytuj_dane()
