@@ -1,39 +1,44 @@
 # Zwierzogrod
 Przychodnia weterynaryjna online
 
+## Uruchomienie aplikacji
+Po uruchomieniu aplikacji pojawia się menu główne.
 
-Uruchomienie aplikacji -> pojawia się menu:
+### 1. Wyświetlenie danych pacjentów (zadanie 1) ✔
+- Po wybraniu tej opcji zostaje wyświetlona lista wszystkich pacjentów w formacie (id zwierzaka - imie zwierzaka).
+    1. Po wybraniu numeru pacjenta z listy zostają wyświetlone jego szczegółowe dane.
+        - Dane zawierają:
+            - ID
+            - Typ zwierzaka
+            - Imię
+            - Waga
+            - Wiek
+            - Status życia (zgon: True/False)
+            - Imię i nazwisko właściciela
+            - Numer telefonu właściciela
+            - Historia leczenia:
+                - ID zabiegu
+                - Data
+                - Rodzaj zabiegu
+                - Zastosowane leki
+                - Cena netto
 
-1. Wyświetlenie danych pacjentów 
-    a. Pojawia się lista wszystkich pacjentów w formacie (1. nazwisko_imiezwierzaka 2.pies2 3.kot1)
-        1. Wybierasz pacjenta wpisując w input numerek
-            a. Wyświetlają się dane o danym pacjencie
-                Przykładowe dane:
-                    - id
-                    - typ zwierzaka
-                    - imie
-                    - waga
-                    - wiek
-                    - zgon: True/False
-                    - imie nazwisko wlasciciela
-                    - numer telefonu wlasciciela
-                    - Historia leczenia:
-                        - id zabiegu
-                        - data
-                        - [rodzaj zabiegu]
-                        - [zastosowane leki]
-                        - [cena netto] 
-2. Dodanie pacjenta
-    a. podanie wszystkich rzeczy co wyżej
-3. Podejmij leczenie
-    a. Pojawia się lista wszystkich pacjentów w formacie (1. nazwisko_imiezwierzaka 2.pies2 3.kot1)
-        1. Wybierasz zwierzaka
-            a. Generowanie krótkiego rapotu (wyswietlenie calej historii leczenia) - wygenerowany plik csv o nazwie leczenie_nazwisko_imiezwierzaka
-4. Usmiercenie zwierzaka
-    a. Pojawia się lista wszystkich pacjentów w formacie (1. nazwisko_imiezwierzaka 2.pies2 3.kot1)
-        1. Wybierasz którego usmieracasz - zmiana zgon z False na True i wyswietlenie czaszki 
-5. Edycja danych pacjenta
-    a. Pojawia się lista wszystkich pacjentów w formacie (1. nazwisko_imiezwierzaka 2.pies2 3.kot1)
-        1. Wybierasz którego edytujesz
-            a. Edycja - wyswietlaja sie wszystkie dane 1. id 2. typ 
-                1. Wybierasz numer ktory edytujesz 
+### 2. Dodanie pacjenta (zadanie 2) ✔
+- Umożliwia dodanie nowego pacjenta podając wszystkie wymagane informacje, jak w przypadku wyświetlania danych pacjentów.
+
+### 3. Podejmij leczenie (zadanie 3) ✔
+- Menu z dwoma opcjami do wyboru:
+    1. Wyświetlenie historii leczenia danego zwierzaka:
+        - Umożliwia wyświetlenie historii leczenia dla wybranego zwierzaka.
+    2. Dodanie historii leczenia dla wybranego zwierzaka:
+        - Pozwala na dodanie nowego wpisu do historii leczenia wybranego zwierzaka.
+
+### 4. Uśmiercenie zwierzaka (zadanie 5)
+- Pozwala na oznaczenie zwierzaka jako zmarłego poprzez zmianę statusu z `False` na `True` oraz wyświetlenie emotki czaszki.
+
+### 5. Edycja danych pacjenta (zadanie 6) ✔
+- Umożliwia edycję danych wybranego pacjenta.
+    1. Po wybraniu pacjenta wyświetlają się wszystkie dostępne informacje.
+    2. Następnie można wybrać numer danych, które chcesz edytować.
+
+Każde zadanie jest zrobione, gdy zostanie dodane do aplikacji i w pełni funkcjonalne.
