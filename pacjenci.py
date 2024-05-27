@@ -33,7 +33,7 @@ def wyswietl_informacje_zwierzaka():
                 print(f"    Opis: {zabieg['opis']}")
                 leki = ', '.join(zabieg.get('leki', [])) if zabieg.get('leki') else "brak"
                 print(f"    Leki: {leki}")
-            print("--------------------")
+            print("\n--------------------")
             return id_zwierzaka
 
 

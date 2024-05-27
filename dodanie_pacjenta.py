@@ -43,4 +43,4 @@ def dodanie_pacjenta(plik):
     zapis_bazy(plik, baza)
 
 
-dodanie_pacjenta(plik)
+
