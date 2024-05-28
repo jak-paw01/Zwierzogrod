@@ -1,12 +1,13 @@
 # Zwierzogrod
 Aplikacja przychodnia weterynaryjnej online. 
 
-System pozwala:
-    - wyświetlić dane pacjentów
-    - dodać nowego pacjenta
-    - wyświetlić historię leczenia
-    - dodać historię nowego zabiegu
-    - edytować dane pacjenta
+System pozwala na wykonanie następujących operacji:
+
+- **Wyświetlić dane pacjentów**: Uzyskanie pełnych informacji na temat wszystkich zarejestrowanych pacjentów.
+- **Dodać nowego pacjenta**: Możliwość dodania nowego pacjenta do systemu z kompletem danych osobowych.
+- **Wyświetlić historię leczenia**: Przeglądanie pełnej historii leczenia i zabiegów poszczególnych pacjentów.
+- **Dodać historię nowego zabiegu**: Wprowadzenie do systemu informacji o nowym zabiegu przeprowadzonym na pacjencie.
+- **Edytować dane pacjenta**: Aktualizacja istniejących danych pacjenta, takich jak dane kontaktowe, adres, itp.
 
 
 ## Uruchomienie aplikacji
@@ -15,7 +16,7 @@ Po uruchomieniu aplikacji pojawia się menu główne, w którym można uruchomi�
 ## Działanie poszczególnych funkcjonalności
 
 ### 1. Wyświetlenie danych pacjentów
-- Po wybraniu tej opcji zostaje wyświetlona lista wszystkich pacjentów w formacie <id zwierzaka - imie zwierzaka>. Po wybraniu numeru pacjenta z listy zostają wyświetlone jego szczegółowe dane:
+- Po wybraniu tej opcji zostaje wyświetlona lista wszystkich pacjentów w formacie id zwierzaka - imie zwierzaka. Po wybraniu numeru pacjenta z listy zostają wyświetlone jego szczegółowe dane:
     - Id
     - Typ zwierzaka
     - Imię
