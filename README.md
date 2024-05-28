@@ -35,14 +35,14 @@ Po uruchomieniu aplikacji pojawia się menu główne, w którym można uruchomi�
 - Umożliwia dodanie nowego pacjenta podając wszystkie wymagane informacje.
 
 ### 3. Podejmij leczenie
-Menu z dwoma opcjami do wyboru:
+- Menu z dwoma opcjami do wyboru:
     - Wyświetlenie historii leczenia danego zwierzaka:
         - Umożliwia wyświetlenie historii leczenia dla wybranego zwierzaka.
     - Dodanie historii leczenia dla wybranego zwierzaka:
         - Pozwala na dodanie nowego wpisu do historii leczenia wybranego zwierzaka.
 
 ### 5. Edycja danych pacjenta
-Umożliwia edycję danych wybranego pacjenta.
+- Umożliwia edycję danych wybranego pacjenta.
     - Po wybraniu pacjenta wyświetlają się wszystkie dostępne informacje.
     - Następnie należy wybrać, która ma zostać zmieniona.
     - W kolejnym kroku aplikacja poprosi o podanie nowej wartości.
