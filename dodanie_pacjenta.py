@@ -36,7 +36,8 @@ def dodanie_pacjenta(plik):
         "wlasciciel": {
             "imie_nazwisko": wlasciciel_imie_nazwisko,
             "telefon": wlasciciel_telefon
-        }
+        },
+        "historia_leczenia":[]
     }
 
     baza["zwierzeta"].append(nowy_zwierzak)
