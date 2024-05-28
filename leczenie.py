@@ -19,7 +19,7 @@ def historia_dodanie(id_zwierzaka, data):
     zwierz = data['zwierzeta'][id_zwierzaka-1]['historia_leczenia']
 
     if zwierz:
-        max(zabieg['id_zabiegu'] for zabieg in zwierz) + 1
+        nowe_id_zabiegu = max(zabieg['id_zabiegu'] for zabieg in zwierz) + 1
     else:
         nowe_id_zabiegu = id_zwierzaka*100+1
 
