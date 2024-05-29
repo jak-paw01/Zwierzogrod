@@ -48,7 +48,7 @@ def wybranie_pacjenta():
 
     while True:
         try:
-            id_wybrany = int(input("Podaj id zwierzęcia w celu wyświetlenia pełnych informacji o nim: \n"))
+            id_wybrany = int(input("\nPodaj id zwierzęcia w celu wyświetlenia pełnych informacji o nim: \n"))
 
             if id_wybrany < min_id or id_wybrany > max_id:
                 raise ValueError(f"Id {id_wybrany} jest spoza zakresu (min: {min_id}, max: {max_id}).")

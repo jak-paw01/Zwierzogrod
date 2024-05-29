@@ -6,12 +6,12 @@ def historia_wyswietlenie(id_zwierzaka, data):
 
     zwierze = next(filter(lambda x: x['id'] == id_zwierzaka, data['zwierzeta']))
     for i in zwierze['historia_leczenia']:
-        print(f"Id_zabiegu: {i['id_zabiegu']}")
+        print(f"\nId_zabiegu: {i['id_zabiegu']}")
         print(f"Data wizyty: {i['data']}")
         print(f"Opis wizyty: {i['opis']}")
         print(f"Przypisane leki: {i['leki']}")
         print(f"Kwota brutto: {i['kwota']*1.23}")
-        print("---------------------")
+        print("\n---------------------")
 
 def historia_dodanie(id_zwierzaka, data):
     # Dodanie nowej pozycji do historii leczenia danego zwierzaka
