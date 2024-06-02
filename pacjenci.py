@@ -9,6 +9,16 @@ def znajdz_min_max_id(data):
     ids = [zwierze['id'] for zwierze in data['zwierzeta']]
     return min(ids), max(ids)
 
+def odczyt_danych_zwierzak(zwierze):
+    print(f"ID: {zwierze['id']}")
+    print(f"Typ: {zwierze['typ']}")
+    print(f"Imię: {zwierze['imie']}")
+    print(f"Waga: {zwierze['waga']} kg")
+    print(f"Wiek: {zwierze['wiek']} lat")
+    print(f"Zgon: {'Tak' if zwierze['zgon'] else 'Nie'}")
+    print(f"Id chipu: {zwierze['id_chip'] if zwierze['chip'] == True else 'Brak chipu'}")
+    print(f"Właściciel: {zwierze['wlasciciel']['imie_nazwisko']}")
+    print(f"Numer telefonu właściciela: {zwierze['wlasciciel']['telefon']}")
 
 def wyswietl_informacje_zwierzaka():
     data = odczyt()
@@ -18,14 +28,7 @@ def wyswietl_informacje_zwierzaka():
         if zwierze['id'] == id_zwierzaka:
             print("--------------------")
             print("Dane zwierzaka:")
-            print(f"ID: {zwierze['id']}")
-            print(f"Typ: {zwierze['typ']}")
-            print(f"Imię: {zwierze['imie']}")
-            print(f"Waga: {zwierze['waga']} kg")
-            print(f"Wiek: {zwierze['wiek']} lat")
-            print(f"Zgon: {'Tak' if zwierze['zgon'] else 'Nie'}")
-            print(f"Właściciel: {zwierze['wlasciciel']['imie_nazwisko']}")
-            print(f"Numer telefonu właściciela: {zwierze['wlasciciel']['telefon']}")
+            odczyt_danych_zwierzak(zwierze)
             print("Historia leczenia:")
             for zabieg in zwierze['historia_leczenia']:
                 print(f"  - ID zabiegu: {zabieg['id_zabiegu']}")

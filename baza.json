@@ -7,6 +7,8 @@
             "waga": 30.5,
             "wiek": 5,
             "zgon": false,
+            "chip": false,
+            "id_chip": null,
             "wlasciciel": {
                 "imie_nazwisko": "Jan Waligrucha",
                 "telefon": "123-456-789"
@@ -42,6 +44,8 @@
             "waga": 4.3,
             "wiek": 3,
             "zgon": false,
+            "chip": true,
+            "id_chip": "D7E5F",
             "wlasciciel": {
                 "imie_nazwisko": "Anna Nowak",
                 "telefon": "987-654-321"
@@ -67,6 +71,8 @@
             "waga": 0.9,
             "wiek": 2,
             "zgon": false,
+            "chip": true,
+            "id_chip": "K6L4M",
             "wlasciciel": {
                 "imie_nazwisko": "Marek Wiśniewski",
                 "telefon": "456-789-012"
@@ -89,6 +95,8 @@
             "waga": 0.05,
             "wiek": 1,
             "zgon": false,
+            "chip": false,
+            "id_chip": "N9P1R",
             "wlasciciel": {
                 "imie_nazwisko": "Katarzyna Nowak",
                 "telefon": "321-654-987"
@@ -111,6 +119,8 @@
             "waga": 2.5,
             "wiek": 4,
             "zgon": false,
+            "chip": false,
+            "id_chip": null,
             "wlasciciel": {
                 "imie_nazwisko": "Pawel Mistrzak",
                 "telefon": "654-987-321"
@@ -127,6 +137,51 @@
                     "kwota": 100
                 }
             ]
+        },
+        {
+            "id": 6,
+            "typ": "1",
+            "imie": "w",
+            "waga": 123.0,
+            "wiek": 53,
+            "zgon": false,
+            "chip": false,
+            "id_chip": null,
+            "wlasciciel": {
+                "imie_nazwisko": "a",
+                "telefon": "14 64"
+            },
+            "historia_leczenia": []
+        },
+        {
+            "id": 7,
+            "typ": "pies",
+            "imie": "adam",
+            "waga": 2.0,
+            "wiek": 12,
+            "zgon": false,
+            "chip": true,
+            "id_chip": "PO123",
+            "wlasciciel": {
+                "imie_nazwisko": "a w",
+                "telefon": "1235 34"
+            },
+            "historia_leczenia": []
+        },
+        {
+            "id": 8,
+            "typ": "adw",
+            "imie": "awdaw",
+            "waga": 1.0,
+            "wiek": 2,
+            "zgon": false,
+            "chip": true,
+            "id_chip": "PI123",
+            "wlasciciel": {
+                "imie_nazwisko": "a d",
+                "telefon": "213 123"
+            },
+            "historia_leczenia": []
         }
     ]
 }

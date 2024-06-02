@@ -2,6 +2,7 @@ from pacjenci import wyswietl_informacje_zwierzaka
 from dodanie_pacjenta import dodanie_pacjenta
 from leczenie import leczenie_wybor
 from edycja_pacjenta import edytuj_dane
+from chip_wyszukanie import szukaj_chip
 
 
 def pow_exit():
@@ -31,20 +32,23 @@ def menu():
             print("2. Dodaj pacjenta")
             print("3. Podejmij leczenie | Historia leczenia")
             print("4. Edytuj dane pacjenta")
-            print("5. Wyjście")
-            x = input("\nWitamy w przychodni weterynaryjnej Zwierzogród! Wybierz opcję: ")
+            print("5. Wyszukaj po numerze chipa")
+            print("6. Wyjście")
+            x = int(input("\nWitamy w przychodni weterynaryjnej Zwierzogród! Wybierz opcję: "))
             print("\n--------------------\n")
-            if int(x) < 1 or int(x) > 5:
+            if x < 1 or x > 5:
                 raise ValueError("Proszę wybrać opcję z przedziału 1-5.\n")
-            elif int(x) == 1:
+            elif x == 1:
                 wyswietl_informacje_zwierzaka()
-            elif int(x) == 2:
+            elif x == 2:
                 dodanie_pacjenta("baza.json")
-            elif int(x) == 3:
+            elif x == 3:
                 leczenie_wybor()
-            elif int(x) == 4:
+            elif x == 4:
                 edytuj_dane()
-            elif int(x) == 5:
+            elif x == 5:
+                szukaj_chip()
+            elif x == 6:
                 print("Do widzenia!")
                 break
             if pow_exit() == 2:
