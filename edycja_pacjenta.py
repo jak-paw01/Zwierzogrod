@@ -1,5 +1,6 @@
 import json
 from pacjenci import wyswietl_informacje_zwierzaka, odczyt
+from wyszukanie import usun_polskie_znaki
 
 
 def sprawdz_klucz(zwierze, klucz):
@@ -12,7 +13,7 @@ def sprawdz_klucz(zwierze, klucz):
 def edytuj_dane_zwierzaka(data, id_zwierzaka):
     zwierze = next(filter(lambda x: x['id'] == id_zwierzaka, data['zwierzeta']))
     while True:
-        klucz = input("Podaj nazwę klucza, który chcesz edytować: ").lower()
+        klucz = usun_polskie_znaki(input("Podaj nazwę klucza, który chcesz edytować: ").lower())
         if sprawdz_klucz(zwierze, klucz):
             nowa_wartosc = input("Podaj nową wartość: ")
             zwierze[klucz] = nowa_wartosc

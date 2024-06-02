@@ -2,7 +2,7 @@ from pacjenci import wyswietl_informacje_zwierzaka
 from dodanie_pacjenta import dodanie_pacjenta
 from leczenie import leczenie_wybor
 from edycja_pacjenta import edytuj_dane
-from chip_wyszukanie import szukaj_chip
+from wyszukanie import wyszukanie
 
 
 def pow_exit():
@@ -32,7 +32,7 @@ def menu():
             print("2. Dodaj pacjenta")
             print("3. Podejmij leczenie | Historia leczenia")
             print("4. Edytuj dane pacjenta")
-            print("5. Wyszukaj po numerze chipa")
+            print("5. Wyszukaj po numerze chipa lub imieniu")
             print("6. Wyjście")
             x = int(input("\nWitamy w przychodni weterynaryjnej Zwierzogród! Wybierz opcję: "))
             print("\n--------------------\n")
@@ -47,7 +47,7 @@ def menu():
             elif x == 4:
                 edytuj_dane()
             elif x == 5:
-                szukaj_chip()
+                wyszukanie()
             elif x == 6:
                 print("Do widzenia!")
                 break
