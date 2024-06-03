@@ -7,30 +7,29 @@ from usuwanie import usuwanie_wybor, usuwanie_lekow_wybor
 from leki import wyswietl_leki, leki_wybor
 
 
-def pow_exit():
+def pow_exit(komunikat, operacja):
     while True:
         try:
-            print("\n1. Powrót do menu głównego")
-            print("2. Wyjście")
+            print(f"\n{komunikat}")
+            print("\n1. Wykonaj ponownie")
+            print("2. Powrót do menu głównego")
             print("\n--------------------\n")
-            y = input("Wybierz 1, aby powrócić do menu głównego, lub 2 aby wyjść: ")
+            y = input("WYBIERZ 1, ABY WYKONAĆ OPERACJĘ PONOWNIE, LUB 2 ABY WRÓCIĆ DO MENU GŁÓWNEGO:")
             print("\n--------------------")
-            if int(y) < 0 or int(y) > 2:
-                raise ValueError("\nProszę wybrać opcję z przedziału 1-2.\n")
+            if int(y) < 1 or int(y) > 2:
+                raise ValueError("\nPROSZĘ WYBRAĆ OPCJĘ Z 1 LUB 2!\n")
             elif int(y) == 1:
-                return y
+                operacja()
             elif int(y) == 2:
-                print("\nDo widzenia!")
-                return 2
+                return
         except ValueError as e:
             print(e)
 
-
 def menu():
-
     while True:
         try:
-            print("\n1. Wyświetl dane pacjentów")
+            print("\n=== MENU GŁÓWNE ===\n")
+            print("1. Wyświetl dane pacjentów")
             print("2. Dodaj pacjenta")
             print("3. Podejmij leczenie | Historia leczenia")
             print("4. Edytuj dane pacjenta")
@@ -39,36 +38,62 @@ def menu():
             print("7. Wyświetl bazę leków")
             print("8. Dodaj | Edytuj lek")
             print("9. Usuń lek | Wyczyść bazę leków")
-            print("10. Wyjście")
-            x = int(input("\nWitamy w przychodni weterynaryjnej Zwierzogród! Wybierz opcję: "))
+            print("10. Wyjście\n")
+            x = int(input("ZNAJDUJESZ SIĘ W MENU GŁÓWNYM APLIKACJI! ABY WYBRAĆ OPCJĘ WPROWADŹ ODPOWIEDNIĄ CYFRĘ (1-10): "))
             print("\n--------------------\n")
             if x < 1 or x > 10:
-                raise ValueError("Proszę wybrać opcję z przedziału 1-10.\n")
+                raise ValueError("PROSZĘ WYBRAC OPCJĘ Z PRZEDZIAŁU OD 1 DO 10!\n")
             elif x == 1:
                 wyswietl_informacje_zwierzaka()
+                print("\n=== OPERACJA ZOSTAŁA WYKONANA POMYśLNIE ===\n")
+                pow_exit("Czy chcesz wyświetlić dane pacjentów ponownie?", wyswietl_informacje_zwierzaka)
             elif x == 2:
-                dodanie_pacjenta("baza.json")
+                def operacja():
+                    dodanie_pacjenta("baza.json")
+                    print("\n=== DODANO NOWEGO PACJENTA ===\n")
+                operacja()
+                pow_exit("Czy chcesz dodać kolejnego pacjenta?", operacja)
             elif x == 3:
-                leczenie_wybor()
+                def operacja():
+                    leczenie_wybor()
+                    print("\n=== DODANO NOWE LECZENIE ===\n")
+                operacja()
+                pow_exit("Czy chcesz dodać kolejne leczenie?", operacja)
             elif x == 4:
-                edytuj_dane()
+                def operacja():
+                    edytuj_dane()
+                    print("\n=== ZAKTUALIZOWANO DANE PACJENTA ===\n")
+                operacja()
+                pow_exit("Czy chcesz edytować kolejnego pacjenta?", operacja)
             elif x == 5:
                 wyszukanie()
+                print("\n=== OPERACJA ZOSTAŁA WYKONANA POMYśLNIE ===\n")
+                pow_exit("Czy chcesz wyszukać po numerze chipa lub imieniu ponownie?", wyszukanie)
             elif x == 6:
-                usuwanie_wybor()
+                def operacja():
+                    usuwanie_wybor()
+                    print("\n=== OPERACJA ZOSTAŁA WYKONANA POMYśLNIE ===\n")
+                operacja()
+                pow_exit("Czy chcesz usunąć kolejnego zwierzaka lub wyczyścić bazę pacjentów?", operacja)
             elif x == 7:
                 wyswietl_leki()
+                print("\n=== OPERACJA ZOSTAŁA WYKONANA POMYśLNIE ===\n")
+                pow_exit("Czy chcesz wyświetlić bazę leków ponownie?", wyswietl_leki)
             elif x == 8:
-                leki_wybor()
+                def operacja():
+                    leki_wybor()
+                    print("\n=== OPERACJA ZOSTAŁA WYKONANA POMYśLNIE ===\n")
+                operacja()
+                pow_exit("Czy chcesz dodać lub edytować kolejny lek?", operacja)
             elif x == 9:
-                usuwanie_lekow_wybor()
+                def operacja():
+                    usuwanie_lekow_wybor()
+                    print("\n=== OPERACJA ZOSTAŁA WYKONANA POMYśLNIE ===\n")
+                operacja()
+                pow_exit("Czy chcesz usunąć kolejny lek lub wyczyścić bazę leków?", operacja)
             elif x == 10:
-                print("Do widzenia!")
-                break
-            if pow_exit() == 2:
+                print("DO WIDZENIA!")
                 break
         except ValueError as e:
             print(f"{e}\n")
-
-
 menu()

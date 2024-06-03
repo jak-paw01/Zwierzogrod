@@ -156,37 +156,53 @@
                     "kwota": 100
                 }
             ]
+        },
+        {
+            "id": 6,
+            "typ": "pies",
+            "imie": "logo",
+            "waga": 12.0,
+            "data_urodzenia": "09-01-2012",
+            "zgon": false,
+            "chip": false,
+            "id_chip": null,
+            "wlasciciel": {
+                "imie_nazwisko": "JP",
+                "telefon": "112"
+            },
+            "historia_leczenia": []
         }
-    ], "leki": [
-    {
-        "id": 1,
-        "nazwa": "Szczepionka",
-        "cena": 30
-    },
-    {
-        "id": 2,
-        "nazwa": "Bandaże",
-        "cena": 20
-    },
-    {
-        "id": 3,
-        "nazwa": "Tabletki przeciw robakom",
-        "cena": 100
-    },
-    {
-        "id": 4,
-        "nazwa": "Antybiotyk",
-        "cena": 200
-    },
-    {
-        "id": 5,
-        "nazwa": "Witaminy",
-        "cena": 100
-    },
-    {
-        "id": 6,
-        "nazwa": "Pasta do zębów",
-        "cena": 50
-    }
-]
+    ],
+    "leki": [
+        {
+            "id": 1,
+            "nazwa": "Szczepionka",
+            "cena": 30
+        },
+        {
+            "id": 2,
+            "nazwa": "Bandaże",
+            "cena": 20
+        },
+        {
+            "id": 3,
+            "nazwa": "Tabletki przeciw robakom",
+            "cena": 100
+        },
+        {
+            "id": 4,
+            "nazwa": "Antybiotyk",
+            "cena": 200
+        },
+        {
+            "id": 5,
+            "nazwa": "Witaminy",
+            "cena": 100
+        },
+        {
+            "id": 6,
+            "nazwa": "Pasta do zębów",
+            "cena": 50
+        }
+    ]
 }
