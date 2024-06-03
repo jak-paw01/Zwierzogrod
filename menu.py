@@ -3,6 +3,7 @@ from dodanie_pacjenta import dodanie_pacjenta
 from leczenie import leczenie_wybor
 from edycja_pacjenta import edytuj_dane
 from wyszukanie import wyszukanie
+from usuwanie import usuwanie_wybor
 
 
 def pow_exit():
@@ -33,11 +34,12 @@ def menu():
             print("3. Podejmij leczenie | Historia leczenia")
             print("4. Edytuj dane pacjenta")
             print("5. Wyszukaj po numerze chipa lub imieniu")
-            print("6. Wyjście")
+            print("6. Usuń zwierzaka | Wyczyść bazę pacjentów")
+            print("7. Wyjście")
             x = int(input("\nWitamy w przychodni weterynaryjnej Zwierzogród! Wybierz opcję: "))
             print("\n--------------------\n")
-            if x < 1 or x > 5:
-                raise ValueError("Proszę wybrać opcję z przedziału 1-5.\n")
+            if x < 1 or x > 7:
+                raise ValueError("Proszę wybrać opcję z przedziału 1-7.\n")
             elif x == 1:
                 wyswietl_informacje_zwierzaka()
             elif x == 2:
@@ -49,6 +51,8 @@ def menu():
             elif x == 5:
                 wyszukanie()
             elif x == 6:
+                usuwanie_wybor()
+            elif x == 7:
                 print("Do widzenia!")
                 break
             if pow_exit() == 2:
