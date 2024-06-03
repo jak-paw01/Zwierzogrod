@@ -1,6 +1,6 @@
 import json
 from pacjenci import odczyt
-
+from datetime import datetime
 
 def zapis_bazy(plik, baza):
     with open(plik, 'w', encoding='utf-8') as f:
@@ -33,7 +33,15 @@ def dodanie_pacjenta(plik='baza.json'):
     typ = input("Podaj typ zwierzęcia: ")
     imie = input("Podaj imię zwierzęcia: ")
     waga = float(input("Podaj wagę zwierzęcia: "))
-    wiek = int(input("Podaj wiek zwierzęcia: "))
+
+    while True:
+        data_urodzenia = input("Podaj datę (dd-mm-yyyy): ")
+        try:
+            datetime.strptime(data_urodzenia, "%d-%m-%Y")
+            break
+        except ValueError:
+            print("Podano niepoprawny format daty. Spróbuj ponownie.")
+
     zgon = False
     wlasciciel_imie_nazwisko = input("Podaj imię i nazwisko właściciela: ")
     wlasciciel_telefon = input("Podaj telefon właściciela: ")
@@ -47,7 +55,7 @@ def dodanie_pacjenta(plik='baza.json'):
         "typ": typ,
         "imie": imie,
         "waga": waga,
-        "wiek": wiek,
+        "data_urodzenia": data_urodzenia,
         "zgon": zgon,
         "chip": czy_chip,
         "id_chip": chip_id,
@@ -58,8 +66,8 @@ def dodanie_pacjenta(plik='baza.json'):
         "historia_leczenia":[]
     }
 
-    
     baza["zwierzeta"].append(nowy_zwierzak)
     zapis_bazy(plik, baza)
+
 
 

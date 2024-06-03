@@ -4,8 +4,8 @@
             "id": 1,
             "typ": "pies",
             "imie": "Laudon",
-            "waga": 30.5,
-            "wiek": 5,
+            "waga": 5.0,
+            "data_urodzenia": "15-06-2018",
             "zgon": false,
             "chip": false,
             "id_chip": null,
@@ -34,6 +34,14 @@
                         "Tabletki przeciw robakom"
                     ],
                     "kwota": 200
+                },
+                {
+                    "id_zwierzaka": 1,
+                    "id_zabiegu": 103,
+                    "data": "03-05-2024",
+                    "opis": "Zabieg",
+                    "leki": [],
+                    "kwota": 100.0
                 }
             ]
         },
@@ -42,7 +50,7 @@
             "typ": "kot",
             "imie": "Misia",
             "waga": 4.3,
-            "wiek": 3,
+            "data_urodzenia": "10-05-2020",
             "zgon": false,
             "chip": true,
             "id_chip": "D7E5F",
@@ -61,6 +69,17 @@
                         "Witaminy"
                     ],
                     "kwota": 600
+                },
+                {
+                    "id_zwierzaka": 2,
+                    "id_zabiegu": 202,
+                    "data": "03-05-2024",
+                    "opis": "Test",
+                    "leki": [
+                        "1",
+                        "1"
+                    ],
+                    "kwota": 1.0
                 }
             ]
         },
@@ -69,7 +88,7 @@
             "typ": "papuga",
             "imie": "Polly",
             "waga": 0.9,
-            "wiek": 2,
+            "data_urodzenia": "20-03-2021",
             "zgon": false,
             "chip": true,
             "id_chip": "K6L4M",
@@ -93,7 +112,7 @@
             "typ": "chomik",
             "imie": "Kubuś",
             "waga": 0.05,
-            "wiek": 1,
+            "data_urodzenia": "05-04-2023",
             "zgon": false,
             "chip": false,
             "id_chip": "N9P1R",
@@ -117,7 +136,7 @@
             "typ": "krolik",
             "imie": "Rzepinek",
             "waga": 2.5,
-            "wiek": 4,
+            "data_urodzenia": "30-07-2019",
             "zgon": false,
             "chip": false,
             "id_chip": null,
