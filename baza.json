@@ -156,21 +156,6 @@
                     "kwota": 100
                 }
             ]
-        },
-        {
-            "id": 6,
-            "typ": "pies",
-            "imie": "logo",
-            "waga": 12.0,
-            "data_urodzenia": "09-01-2012",
-            "zgon": false,
-            "chip": false,
-            "id_chip": null,
-            "wlasciciel": {
-                "imie_nazwisko": "JP",
-                "telefon": "112"
-            },
-            "historia_leczenia": []
         }
     ],
     "leki": [
