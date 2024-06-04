@@ -26,6 +26,7 @@ def szukaj_imie(data):
     for zwierze in data['zwierzeta']:
         if imie == usun_polskie_znaki(zwierze['imie']):
             odczyt_danych_zwierzak(zwierze)
+            print("-------------------------")
 
 def wyszukanie():
     data = odczyt()
