@@ -8,6 +8,12 @@ System pozwala na wykonanie następujących operacji:
 - **Wyświetlić historię leczenia**: Przeglądanie pełnej historii leczenia i zabiegów poszczególnych pacjentów.
 - **Dodać historię nowego zabiegu**: Wprowadzenie do systemu informacji o nowym zabiegu przeprowadzonym na pacjencie.
 - **Edytować dane pacjenta**: Aktualizacja istniejących danych pacjenta, takich jak dane kontaktowe, adres, itp.
+- **Wyszukać pacjenta po id chipa lub imieniu**: Wyszukanie zwierzaka lub zwierząt o danej wartości atrybutu
+- **Usunięcie zwierzaka lub całej bazy**: Usunięcie pojedynczego pacjenta lub wszystkich z bazy
+- **Wyświetlenie bazy leków**: Pokazanie, jakich leków używa przychodnia
+- **Dodanie lub edytowanie leków**: Dodanie lub edycja rekordu z bazy leków
+- **Usunięcie leku lub bazy**: Usunięcie pojedynczego leku lub wszystkich z bazy
+- **Wyjście z programu**: Zakończenie działania aplikacji
 
 
 ## Uruchomienie aplikacji
